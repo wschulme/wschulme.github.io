@@ -1,4 +1,76 @@
-a.disabled { 
-    pointer-events: none;
-    color: rgba(0,0,128,0.5);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+  }
+
+h2{
+    z-index: 3;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    font-variant: small-caps;
+}
+.leftside, .rightside {
+    height: 50vh;
+    width: 100%;
+    background-position: center center; 
+}
+
+.leftside {
+    background-image: url('/images/masks_beg.jpg');
+}
+
+.rightside {
+    background-image: url('/images/masks.jpg');
+}
+
+.absolute-center{
+    z-index: 2;
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title{
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font: bold;
+    font-variant: small-caps;
+    border: 1px whitesmoke;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: default;
+}
+
+#overlay1, #overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    opacity: 0.7;
+}
+#overlay1 {
+    background-color: black;
+}
+#overlay2 {
+    background-color: black;
+}
+
+#overlay1:hover , #overlay2:hover {
+    opacity: .6;
+}
+
+@media screen and (min-width:768px) {
+    .leftside, .rightside, #overlay1, #overlay2 {
+        height: 100vh;
+    }
+    #title {
+        font-size: 30px;
+        z-index: 5;
+    }
 }
