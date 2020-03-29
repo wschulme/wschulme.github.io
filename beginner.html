@@ -9,9 +9,52 @@
 </head>
 
 <body>
-  <h1>
-    hello world
-  </h1>
+  <div id= "overlay">
+    <h1 id = "prompt">
+      Please answer the following questions to find the best masks for you.
+    </h1>
+    <hr size="4px" color="whitesmoke">
+    <ul id = "questions">
+      <li class = sliderq>
+        <div class="vertically-stacked-slider">
+          <h2>To what degree is breathability important to you?</h2>
+          <input type="range" value="3" min="1" max="5" id = "1" onchange="valueUpdate(this.value, this.id)">
+        </div>
+        <h3 id = "q1_value" class = "answer">Balanced between filtration and breathability</h3>
+        <hr size="1px" color="whitesmoke">
+      </li>
+      <li>
+        <h2>Reusable?</h2>
+        <form class="form" id = "q2_value">
+          <div class="inputGroup">
+            <input class ="yesno" id="radio1" name="radio" type="radio" onclick="updateYesNo(2,1)"/>
+            <label for="radio1">Yes</label>
+          </div>
+          <div class="inputGroup">
+            <input class ="yesno" id="radio2" name="radio" type="radio" onclick="updateYesNo(2,0)"/>
+            <label for="radio2">No</label>
+          </div>
+        </form>
+        <hr size="1px" color="whitesmoke">
+      </li>
+      <li>
+        <h2>Yes or no?</h2>
+        <form class="form">
+          <div class="inputGroup">
+            <input class ="yesno" id="radio3" name="radio" type="radio" onclick="updateYesNo(3,1)"/>
+            <label for="radio3">Yes</label>
+          </div>
+          <div class="inputGroup">
+            <input class ="yesno" id="radio4" name="radio" type="radio" onclick="updateYesNo(3,0)"/>
+            <label for="radio4">No</label>
+          </div>
+        </form>
+        <hr size="1px" color="whitesmoke">
+      </li>
+    </ul>
+
+    <a class = "calculate">Click to submit</a>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/index.js"></script>
