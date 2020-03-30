@@ -173,7 +173,10 @@ $("#advanced").click(function(){
 })
 
 $('#dl').attr({target: '_blank', 
-                    href  : '/images/example.png'});
+href  : '/images/example.png'});
+
+$('#info').attr({target: '_blank', 
+href  : '/info.pdf'});
 
 function initQs() {
     var sewing = localStorage.setItem("s",-1);
