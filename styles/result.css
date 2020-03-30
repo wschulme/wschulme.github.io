@@ -9,10 +9,18 @@
     cursor: default;
     letter-spacing: 2px;
 }
-
+html {
+    background: url(/images/work.png); 
+    height: 100%;
+    width: 100%;
+    background-position: bottom left;
+} 
 a{
     cursor: pointer;
     color: blue;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: whitesmoke;
+    text-decoration: none;
 }
 h2{
     font-size: 16px;
@@ -24,6 +32,9 @@ h3{
 .container {
     padding-bottom: 15px;
     padding-top: 10px;
+}
+.desc{
+    margin-top: 5vh;
 }
 
 #button, #prev, #next, #prevA, #nextA {
@@ -40,6 +51,7 @@ h3{
 #button:hover, #prev:hover, #next:hover, #prevA:hover, #nextA:hover{
     color: blue;
     background: whitesmoke;
+
 }
 
 #overlay {
@@ -51,6 +63,7 @@ h3{
 }
 
 #disclaimer {
+    margin-top: 15vh;
     padding: 30px;
 }
 
@@ -76,6 +89,14 @@ h3{
     padding: 20px;
 }
 
+#message {
+    padding-bottom: 15px;
+}
+
+#dl{
+    padding-right: 30vh;
+}
+
 @media screen and (min-width:768px) {
     h2{
         font-size: 18px;
@@ -83,5 +104,9 @@ h3{
     }
     h3{
         font-size: 14px;
-    }  
+    }
+    #disclaimer {
+        margin-top: 25vh;
+        padding: 30px;
+    }
 }

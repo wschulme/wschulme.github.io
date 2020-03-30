@@ -106,35 +106,40 @@ const j = `{
             "rank":3,
             "reusable":1,
             "washable":0,
-            "src":""
+            "src":"/images/duct_tape.jpg",
+            "message":"Duct tape will hold your mask together well, but only for short time periods, like a few hours at a time. Don’t let it get wet, and make sure you take off all the tape before washing. Retape before the next use."
         },
         {
             "name":"fabric tape",
             "rank":2,
             "reusable":1,
             "washable":1,
-            "src":""
+            "src":"/images/fabric.png",
+            "message":"This can be used as a direct alternative to sewing. With fabric tape, your mask can be machine-washed and is completely reusable."
         },
         {
             "name":"fabric glue",
             "rank":1,
             "reusable":1,
             "washable":1,
-            "src":""
+            "src":"/images/f_glue.jpg",
+            "message":"This can be used as a direct alternative to sewing. With fabric glue, your mask can be machine-washed and is completely reusable."
         },
         {
             "name":"industrial tape",
             "rank":4,
             "reusable":1,
             "washable":0,
-            "src":""
+            "src":"/images/indust.png",
+            "message":"Industrial tape will hold your mask together well, but only for short time periods, like a few hours at a time. Don’t let it get wet, and make sure you take off all the tape before washing. Retape before the next use."
         },
         {
             "name":"hot glue",
             "rank":5,
             "reusable":0,
             "washable":0,
-            "src":""
+            "src":"/images/hot.jpg",
+            "message":"Using hot glue will make your mask single-use — it can release fumes or melt in hot water. However, it will hold your mask together for the whole day."
         }
     ]
 }`;
@@ -167,6 +172,9 @@ $("#advanced").click(function(){
     initQs();
 })
 
+$('#dl').attr({target: '_blank', 
+                    href  : '/images/example.png'});
+
 function initQs() {
     var sewing = localStorage.setItem("s",-1);
     var q1 = localStorage.setItem("q1", 3);
@@ -182,7 +190,7 @@ function calculate(id) {
         }
     }
     else {
-        if(q2 == -1 || (q2 == 1 && q3 == -1)) {
+        if(q2 == -1 || q3 == -1) {
             alertError("Please answer all questions.")
             return;
         }
@@ -200,12 +208,6 @@ function updateYesNo(question, value, isSewing) {
     if(isSewing == 0) {
         if(question == 2) {
             q2 = value;
-            if (value == 1) {
-                $("#q3").show();
-            }
-            else {
-                $("#q3").hide();
-            }
         }
         else q3 = value;
         sewing = 0;
@@ -301,9 +303,9 @@ function loadResult(i) {
 
 function loadAResult(i) {
     var toDisplay = adhesives[i-1];
-    //$("#pictureA").attr('src', toDisplay['src']);
+    $("#pictureA").attr('src', toDisplay['src']);
     $("#nameA").text(i + ". " + toDisplay['name']);
-    //$("#messageA").text(toDisplay['message']); 
+    $("#messageA").text(toDisplay['message']); 
 }
 
 function prev() {
