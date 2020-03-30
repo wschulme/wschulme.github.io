@@ -4,21 +4,65 @@
 <head>
   <meta charset="utf-8">
   <title>UMask</title>
-
-  <link href="/styles/style.css" rel="stylesheet">
+  
+  <link href="/styles/result.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <h1 class = "center" id = "warning">PLEASE NOTE: Homemade devices are not as effective as professionally made
-             equipment. Commercial masks meet regulatory guidelines, but homemade masks may not. Homemade masks are 
-             to be used at your own risk. If you are sick or otherwise vulnerable, please visit the CDC to find your 
-             best course of action.
-        </h1>
-        <a href="www.cdc.gov">Click here for more info</a>
-        <hr size="4px">
+  <div id = "overlay">
+    <div id = 'disclaimer'>
+      <h2 id = "warning">PLEASE NOTE: Homemade devices are not as effective as professionally made
+        equipment. Commercial masks meet regulatory guidelines, but homemade masks may not. Homemade masks are 
+        to be used at your own risk. If you are sick or otherwise vulnerable, please visit the CDC to find your 
+        best course of action.
+      </h2>
+      <br>
+      <div class = "container">
+        <a href="https://www.cdc.gov">Click here for more info</a>
+      </div>
+      <div class = "container">
+        <a id = "button" onclick="loadResults()">Acknowledge and Continue</a>
+      </div>
     </div>
-
+    <div id = "resultBox"  style="display: none;">
+      <h2>The generated mask is below. Click next to see the top 5.</h2>
+      
+      <div class="parent">
+        <div class="column">
+          <a id = 'prev' onclick="prev()">Previous</a>
+        </div>
+        <div class="column">
+          <img id = 'picture' src="/images/dish_towel.webp">
+          <h2 id = 'name'>Towel</h2>
+        </div>
+        <div class="column">
+          <a id = 'next' onclick="next()">Next</a>
+        </div>
+      </div>
+      <h3 id = 'message'>yeah</h3>
+      <a>Click to download your instructions.</a>
+    </div>
+    <div id = "aBox"  style="display: none;">
+      <h2>The generated adhesive is below. Click next to see the top 5.</h2>
+      
+      <div class="parent">
+        <div class="column">
+          <a id = 'prevA' onclick="prevA()">Previous</a>
+        </div>
+        <div class="column">
+          <img id = 'pictureA' src="/images/dish_towel.webp">
+          <h2 id = 'nameA'>Towel</h2>
+        </div>
+        <div class="column">
+          <a id = 'nextA' onclick="nextA()">Next</a>
+        </div>
+      </div>
+      <h3 id = 'messageA'>yeah</h3>
+      <a onclick="selectAdhesive()">Click to select this adhesive and continue.</a>
+    </div>
+    
+  </div>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/index.js"></script>
 </body>

@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-variant: small-caps;
+    font-weight: lighter;
+    color: whitesmoke;
+    text-align: center;
+    cursor: default;
+    letter-spacing: 2px;
+}
+
+a{
+    cursor: pointer;
+    color: blue;
+}
+h2{
+    font-size: 16px;
+    padding: 2px;
+}
+h3{
+    font-size: 12px;
+}
+.container {
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+#button, #prev, #next, #prevA, #nextA {
+    color: whitesmoke;
+    font-size: 25px;
+    font: bold;
+    font-variant: small-caps;
+    border: 1px whitesmoke;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+#button:hover, #prev:hover, #next:hover, #prevA:hover, #nextA:hover{
+    color: blue;
+    background: whitesmoke;
+}
+
+#overlay {
+    background-color: black;
+    opacity: .7;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+#disclaimer {
+    padding: 30px;
+}
+
+/*Result display*/
+.parent {
+    display: flex;
+    flex-direction:row;
+  }
+  
+.column {
+    flex: 1 1 0px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+#picture, #pictureA {
+    max-height: 45vh;
+    max-width: 100%;
+}
+
+#name, #nameA {
+    padding: 20px;
+}
+
+@media screen and (min-width:768px) {
+    h2{
+        font-size: 18px;
+        padding: 2px;
+    }
+    h3{
+        font-size: 14px;
+    }  
+}

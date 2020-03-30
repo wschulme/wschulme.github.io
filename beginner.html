@@ -24,28 +24,28 @@
         <hr size="1px" color="whitesmoke">
       </li>
       <li>
-        <h2>Reusable?</h2>
+        <h2>Does the mask need to be reusable?</h2>
         <form class="form" id = "q2_value">
           <div class="inputGroup">
-            <input class ="yesno" id="radio1" name="radio" type="radio" onclick="updateYesNo(2,1)"/>
+            <input class ="yesno" id="radio1" name="radio" type="radio" onclick="updateYesNo(2,1,0)"/>
             <label for="radio1">Yes</label>
           </div>
           <div class="inputGroup">
-            <input class ="yesno" id="radio2" name="radio" type="radio" onclick="updateYesNo(2,0)"/>
+            <input class ="yesno" id="radio2" name="radio" type="radio" onclick="updateYesNo(2,0,0)"/>
             <label for="radio2">No</label>
           </div>
         </form>
         <hr size="1px" color="whitesmoke">
       </li>
-      <li>
-        <h2>Yes or no?</h2>
+      <li id = "q3" style="display: none;">
+        <h2>Does the mask need to be washable? (without disassembling)</h2>
         <form class="form">
           <div class="inputGroup">
-            <input class ="yesno" id="radio3" name="radio" type="radio" onclick="updateYesNo(3,1)"/>
+            <input class ="yesno" id="radio3" name="radio" type="radio" onclick="updateYesNo(3,1,0)"/>
             <label for="radio3">Yes</label>
           </div>
           <div class="inputGroup">
-            <input class ="yesno" id="radio4" name="radio" type="radio" onclick="updateYesNo(3,0)"/>
+            <input class ="yesno" id="radio4" name="radio" type="radio" onclick="updateYesNo(3,0,0)"/>
             <label for="radio4">No</label>
           </div>
         </form>
@@ -53,7 +53,7 @@
       </li>
     </ul>
 
-    <a class = "calculate">Click to submit</a>
+    <a class = "calculate" id = "a" onclick="calculate(this.id)">Click to submit</a>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
