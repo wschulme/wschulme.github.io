@@ -66,7 +66,7 @@ h2{
     opacity: .6;
 }
 
-@media screen and (min-width:768px) {
+@media only screen and (min-width:768px) {
     .leftside, .rightside, #overlay1, #overlay2 {
         height: 100vh;
     }
